@@ -215,35 +215,33 @@ class ChooseCharacters extends Component {
           </div>
         </div>
         <div className="row">
+
           <div className="col-sm-6">
             <div className="panel panel-default">
-              <div className="panel-heading">Kanji · 漢字</div>
+              <div className="panel-heading">Animal Kanji · 漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('hiragana', this.state.showAlternatives.indexOf('hiragana') >= 0)}
+                {this.showGroupRows('animal_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
               </div>
               <div className="panel-footer text-center">
-                <a href="javascript:;" onClick={()=>this.selectAll('hiragana')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
-                  onClick={()=>this.selectNone('hiragana')}>None</a>
-                &nbsp;&middot;&nbsp; <a href="javascript:;" onClick={()=>this.selectAll('hiragana', true)}>All alternative</a>
-                &nbsp;&middot;&nbsp; <a href="javascript:;" onClick={()=>this.selectNone('hiragana', true)}>No alternative</a>
+                <a href="javascript:;" onClick={()=>this.selectAll('animal_kanji')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
+                  onClick={()=>this.selectNone('animal_kanji')}>None</a>
               </div>
             </div>
           </div>
+
           <div className="col-sm-6">
             <div className="panel panel-default">
-              <div className="panel-heading">Katakana · カタカナ</div>
+              <div className="panel-heading">Common Kanji · 漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('katakana', this.state.showAlternatives.indexOf('katakana') >= 0, this.state.showSimilars.indexOf('katakana') >= 0)}
+                {this.showGroupRows('common_kanji', this.state.showAlternatives.indexOf('common_kanji') >= 0)}
               </div>
               <div className="panel-footer text-center">
-                <a href="javascript:;" onClick={()=>this.selectAll('katakana')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
-                  onClick={()=>this.selectNone('katakana')}>None
-                </a>
-                &nbsp;&middot;&nbsp; <a href="javascript:;" onClick={()=>this.selectAll('katakana', true)}>All alternative</a>
-                &nbsp;&middot;&nbsp; <a href="javascript:;" onClick={()=>this.selectNone('katakana', true)}>No alternative</a>
+                <a href="javascript:;" onClick={()=>this.selectAll('common_kanji')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
+                  onClick={()=>this.selectNone('common_kanji')}>None</a>
               </div>
             </div>
           </div>
+
           <div className="col-sm-3 col-xs-12 pull-right">
             <span className="pull-right lock">Lock to stage &nbsp;
               {
