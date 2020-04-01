@@ -1,6 +1,7 @@
 export const kanaDictionary = {
   'hiragana': {
-    'h_group1': { characters: { 'あ': ['a'], 'い': ['i'], 'う': ['u'], 'え': ['e'], 'お': ['o'] } },
+    'h_group0': { characters: { 'りゅう': ['龍'], 'いぬ': ['犬'], 'ねずみ': ['鼠'], 'ねこ': ['猫'], 'さかな': ['魚'], 'うさぎ': ['兎'], 'うし': ['牛'], 'ひつじ': ['羊'] } },
+    /*'h_group1': { characters: { 'あ': ['a'], 'い': ['i'], 'う': ['u'], 'え': ['e'], 'お': ['o'] } },
     'h_group2': { characters: { 'か': ['ka'], 'き': ['ki'], 'く': ['ku'], 'け': ['ke'], 'こ': ['ko'] } },
     'h_group3': { characters: { 'さ': ['sa'], 'し': ['shi','si'], 'す': ['su'], 'せ': ['se'], 'そ': ['so'] } },
     'h_group4': { characters: { 'た': ['ta'], 'ち': ['chi','ti'], 'つ': ['tsu','tu'], 'て': ['te'], 'と': ['to'] } },
@@ -25,7 +26,8 @@ export const kanaDictionary = {
     'h_group23_a': { characters: { 'ぎゃ': ['gya'], 'ぎゅ': ['gyu'], 'ぎょ': ['gyo'] } },
     'h_group24_a': { characters: { 'じゃ': ['ja','jya'], 'じゅ': ['ju','jyu'], 'じょ': ['jo','jyo'] } },
     'h_group25_a': { characters: { 'びゃ': ['bya'], 'びゅ': ['byu'], 'びょ': ['byo'] } },
-    'h_group26_a': { characters: { 'ぴゃ': ['pya'], 'ぴゅ': ['pyu'], 'ぴょ': ['pyo'] } }
+    'h_group26_a': { characters: { 'ぴゃ': ['pya'], 'ぴゅ': ['pyu'], 'ぴょ': ['pyo'] } },
+    'h_group270': { characters: { 'りゅう': ['龍'], 'いぬ': ['犬'], 'ねずみ': ['鼠'], 'ねこ': ['猫'], 'さかな': ['魚'], 'うさぎ': ['兎'], 'うし': ['牛'], 'ひつじ': ['羊'] } }*/
   },
   'katakana': {
     'k_group1': { characters: { 'ア': ['a'], 'イ': ['i'], 'ウ': ['u'], 'エ': ['e'], 'オ': ['o'] } },

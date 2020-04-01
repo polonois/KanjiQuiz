@@ -217,7 +217,7 @@ class ChooseCharacters extends Component {
         <div className="row">
           <div className="col-sm-6">
             <div className="panel panel-default">
-              <div className="panel-heading">Hiragana · ひらがな</div>
+              <div className="panel-heading">Kanji · 漢字</div>
               <div className="panel-body selection-areas">
                 {this.showGroupRows('hiragana', this.state.showAlternatives.indexOf('hiragana') >= 0)}
               </div>
