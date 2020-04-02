@@ -208,7 +208,7 @@ class ChooseCharacters extends Component {
           <div className="col-xs-12">
             <div className="panel panel-default">
               <div className="panel-body welcome">
-                <h4>Welcome to Kana Pro!</h4>
+                <h4>Welcome to Kanji Pro!</h4>
                 <p>Please choose the groups of characters that you'd like to be studying.</p>
               </div>
             </div>
@@ -218,7 +218,20 @@ class ChooseCharacters extends Component {
 
           <div className="col-sm-6">
             <div className="panel panel-default">
-              <div className="panel-heading">Animal Kanji · 漢字</div>
+              <div className="panel-heading">Common Kanji · 一般的な漢字</div>
+              <div className="panel-body selection-areas">
+                {this.showGroupRows('common_kanji', this.state.showAlternatives.indexOf('common_kanji') >= 0)}
+              </div>
+              <div className="panel-footer text-center">
+                <a href="javascript:;" onClick={()=>this.selectAll('common_kanji')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
+                  onClick={()=>this.selectNone('common_kanji')}>None</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="panel panel-default">
+              <div className="panel-heading">Animal Kanji · 動物漢字</div>
               <div className="panel-body selection-areas">
                 {this.showGroupRows('animal_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
               </div>
@@ -231,13 +244,13 @@ class ChooseCharacters extends Component {
 
           <div className="col-sm-6">
             <div className="panel panel-default">
-              <div className="panel-heading">Common Kanji · 漢字</div>
+              <div className="panel-heading">Halloween Kanji · ハロウィン漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('common_kanji', this.state.showAlternatives.indexOf('common_kanji') >= 0)}
+                {this.showGroupRows('halloween_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
               </div>
               <div className="panel-footer text-center">
-                <a href="javascript:;" onClick={()=>this.selectAll('common_kanji')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
-                  onClick={()=>this.selectNone('common_kanji')}>None</a>
+                <a href="javascript:;" onClick={()=>this.selectAll('halloween_kanji')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
+                  onClick={()=>this.selectNone('halloween_kanji')}>None</a>
               </div>
             </div>
           </div>
