@@ -74,6 +74,35 @@ class ChooseCharacters extends Component {
       this.addSelect(groupName);
   }
 
+  /*selectMultiple(arr) {
+    let newSelectedGroups = this.state.selectedGroups.slice();
+    var i;
+    for (i = 0; i < arr.length; i++) {
+    const thisKana = kanaDictionary[arr[i]];
+    Object.keys(thisKana).forEach(groupName => {
+        newSelectedGroups.push(groupName);
+    });
+    }
+    this.setState({errMsg: '', selectedGroups: newSelectedGroups});
+  }*/
+
+  /*selectMultipleNone(arr) {
+    let newSelectedGroups = [];
+    console.log(this.state.selectedGroups);
+      var i;
+      for (i = 0;i < arr.length; i++) {
+    this.state.selectedGroups.forEach(groupName => {
+      let mustBeRemoved = false;
+      Object.keys(kanaDictionary[arr[i]]).forEach(removableGroupName => {
+        if(removableGroupName === groupName)
+          mustBeRemoved = true;
+      });
+      if(!mustBeRemoved)
+        newSelectedGroups.push(groupName);
+    });}
+    this.setState({selectedGroups: newSelectedGroups});
+  }*/
+
   selectAll(whichKana, altOnly=false, similarOnly=false) {
     const thisKana = kanaDictionary[whichKana];
     let newSelectedGroups = this.state.selectedGroups.slice();
@@ -217,6 +246,7 @@ class ChooseCharacters extends Component {
         <div className="row">
 
           <div className="col-sm-6">
+
             <div className="panel panel-default">
               <div className="panel-heading">Common Kanji · 一般的な漢字</div>
               <div className="panel-body selection-areas">
@@ -227,17 +257,42 @@ class ChooseCharacters extends Component {
                   onClick={()=>this.selectNone('common_kanji')}>None</a>
               </div>
             </div>
+
           </div>
 
           <div className="col-sm-6">
             <div className="panel panel-default">
               <div className="panel-heading">Animal Kanji · 動物漢字</div>
+
+	      <div className="col-sm-12">
+              <div className="panel panel-default">
+              <div className="panel-heading">Common Animals · 一般的な漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('animal_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
+                {this.showGroupRows('common_animal_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
               </div>
+              </div>
+              </div>
+	      
+	      <div className="col-sm-12">
+              <div className="panel panel-default">
+              <div className="panel-heading">Feral Animals · 一般的な漢字</div>
+              <div className="panel-body selection-areas">
+                {this.showGroupRows('feral_animal_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
+              </div>
+              </div>
+              </div>
+
+	      <div className="col-sm-12">
+              <div className="panel panel-default">
+              <div className="panel-heading">Insects and Reptiles · 一般的な漢字</div>
+              <div className="panel-body selection-areas">
+                {this.showGroupRows('insects_reptiles_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
+              </div>
+              </div>
+              </div>
+
               <div className="panel-footer text-center">
-                <a href="javascript:;" onClick={()=>this.selectAll('animal_kanji')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
-                  onClick={()=>this.selectNone('animal_kanji')}>None</a>
+                <p>頑張って！</p>
               </div>
             </div>
           </div>
