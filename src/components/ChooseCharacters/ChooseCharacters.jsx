@@ -245,70 +245,121 @@ class ChooseCharacters extends Component {
         </div>
         <div className="row">
 
+
           <div className="col-sm-6">
+
 
             <div className="panel panel-default">
               <div className="panel-heading">Common Kanji · 一般的な漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('common_kanji', this.state.showAlternatives.indexOf('common_kanji') >= 0)}
+                {this.showGroupRows('common_kanji')}
               </div>
               <div className="panel-footer text-center">
-                <a href="javascript:;" onClick={()=>this.selectAll('common_kanji')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
-                  onClick={()=>this.selectNone('common_kanji')}>None</a>
+                <p></p>
               </div>
             </div>
 
-          </div>
+            <div className="panel panel-default">
+              <div className="panel-heading">Days & Months Kanji · 動物漢字</div>
+              <div className="panel-body selection-areas">
+                <div className="col-sm-12">
+                  <div className="panel panel-default">
+                    <div className="panel-heading">Days · 一般的な漢字</div>
+                    <div className="panel-body selection-areas">
+                    {this.showGroupRows('semaine_kanji')}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-12">
+                  <div className="panel panel-default">
+                    <div className="panel-heading">Months · 一般的な漢字</div>
+                    <div className="panel-body selection-areas">
+                    {this.showGroupRows('mois_kanji')}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="panel-footer text-center">
+                <p></p>
+              </div>
+            </div>
 
+            <div className="panel panel-default">
+              <div className="panel-heading">Colour Kanji · ハロウィン漢字</div>
+              <div className="panel-body selection-areas">
+                {this.showGroupRows('couleur_kanji')}
+              </div>
+              <div className="panel-footer text-center">
+                <p></p>
+              </div>
+            </div>
+
+
+          </div>
           <div className="col-sm-6">
+
+
             <div className="panel panel-default">
               <div className="panel-heading">Animal Kanji · 動物漢字</div>
-
-	      <div className="col-sm-12">
-              <div className="panel panel-default">
-              <div className="panel-heading">Common Animals · 一般的な漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('common_animal_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
+                <div className="col-sm-12">
+                  <div className="panel panel-default">
+                    <div className="panel-heading">Common Animals · 一般的な漢字</div>
+                    <div className="panel-body selection-areas">
+                    {this.showGroupRows('common_animal_kanji')}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-12">
+                  <div className="panel panel-default">
+                    <div className="panel-heading">Feral Animals · 一般的な漢字</div>
+                    <div className="panel-body selection-areas">
+                    {this.showGroupRows('feral_animal_kanji')}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-12">
+                  <div className="panel panel-default">
+                    <div className="panel-heading">Insects and Reptiles · 一般的な漢字</div>
+                    <div className="panel-body selection-areas">
+                    {this.showGroupRows('insects_reptiles_kanji')}
+                    </div>
+                  </div>
+                </div>
               </div>
-              </div>
-              </div>
-	      
-	      <div className="col-sm-12">
-              <div className="panel panel-default">
-              <div className="panel-heading">Feral Animals · 一般的な漢字</div>
-              <div className="panel-body selection-areas">
-                {this.showGroupRows('feral_animal_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
-              </div>
-              </div>
-              </div>
-
-	      <div className="col-sm-12">
-              <div className="panel panel-default">
-              <div className="panel-heading">Insects and Reptiles · 一般的な漢字</div>
-              <div className="panel-body selection-areas">
-                {this.showGroupRows('insects_reptiles_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
-              </div>
-              </div>
-              </div>
-
               <div className="panel-footer text-center">
-                <p>頑張って！</p>
+                <p></p>
               </div>
             </div>
-          </div>
 
-          <div className="col-sm-6">
             <div className="panel panel-default">
               <div className="panel-heading">Halloween Kanji · ハロウィン漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('halloween_kanji', this.state.showAlternatives.indexOf('hiragana') >= 0)}
+                {this.showGroupRows('halloween_kanji')}
               </div>
               <div className="panel-footer text-center">
-                <a href="javascript:;" onClick={()=>this.selectAll('halloween_kanji')}>All</a> &nbsp;&middot;&nbsp; <a href="javascript:;"
-                  onClick={()=>this.selectNone('halloween_kanji')}>None</a>
+                <p></p>
               </div>
             </div>
+
+            <div className="panel panel-default">
+              <div className="panel-heading">Planet Kanji · ハロウィン漢字</div>
+              <div className="panel-body selection-areas">
+                {this.showGroupRows('planetes_kanji')}
+              </div>
+              <div className="panel-footer text-center">
+                <p></p>
+              </div>
+            </div>
+
+
           </div>
+
+          
+
+
+
+
 
           <div className="col-sm-3 col-xs-12 pull-right">
             <span className="pull-right lock">Lock to stage &nbsp;
