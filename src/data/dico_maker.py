@@ -1,6 +1,6 @@
 # -*-coding:utf8 -*
 
-f = open("commun_kanji.txt", "r")
+f = open("kanji_list.txt", "r")
 line = f.readline()
 kanji = open("kanaDictionary.js", "w")
 kanji.write("export const kanaDictionary = {\n")
