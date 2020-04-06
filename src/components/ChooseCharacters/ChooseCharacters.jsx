@@ -249,10 +249,26 @@ class ChooseCharacters extends Component {
           <div className="col-sm-6">
 
 
+
             <div className="panel panel-default">
-              <div className="panel-heading">Common Kanji · 一般的な漢字</div>
+              <div className="panel-heading">Days & Months Kanji · 動物漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('common_kanji')}
+                <div className="col-sm-12">
+                  <div className="panel panel-default">
+                    <div className="panel-heading">Days · 一般的な漢字</div>
+                    <div className="panel-body selection-areas">
+                    {this.showGroupRows('Kanji Communs 1')}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-12">
+                  <div className="panel panel-default">
+                    <div className="panel-heading">Months · 一般的な漢字</div>
+                    <div className="panel-body selection-areas">
+                    {this.showGroupRows('Kanji Communs 2')}
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="panel-footer text-center">
                 <p></p>
@@ -266,7 +282,7 @@ class ChooseCharacters extends Component {
                   <div className="panel panel-default">
                     <div className="panel-heading">Days · 一般的な漢字</div>
                     <div className="panel-body selection-areas">
-                    {this.showGroupRows('semaine_kanji')}
+                    {this.showGroupRows('Jours de la semaine')}
                     </div>
                   </div>
                 </div>
@@ -274,7 +290,7 @@ class ChooseCharacters extends Component {
                   <div className="panel panel-default">
                     <div className="panel-heading">Months · 一般的な漢字</div>
                     <div className="panel-body selection-areas">
-                    {this.showGroupRows('mois_kanji')}
+                    {this.showGroupRows('Les Mois')}
                     </div>
                   </div>
                 </div>
@@ -287,7 +303,7 @@ class ChooseCharacters extends Component {
             <div className="panel panel-default">
               <div className="panel-heading">Colour Kanji · ハロウィン漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('couleur_kanji')}
+                {this.showGroupRows('Les Couleurs')}
               </div>
               <div className="panel-footer text-center">
                 <p></p>
@@ -306,7 +322,7 @@ class ChooseCharacters extends Component {
                   <div className="panel panel-default">
                     <div className="panel-heading">Common Animals · 一般的な漢字</div>
                     <div className="panel-body selection-areas">
-                    {this.showGroupRows('common_animal_kanji')}
+                    {this.showGroupRows('Animaux Domestiques')}
                     </div>
                   </div>
                 </div>
@@ -314,7 +330,7 @@ class ChooseCharacters extends Component {
                   <div className="panel panel-default">
                     <div className="panel-heading">Feral Animals · 一般的な漢字</div>
                     <div className="panel-body selection-areas">
-                    {this.showGroupRows('feral_animal_kanji')}
+                    {this.showGroupRows('Animaux Sauvages')}
                     </div>
                   </div>
                 </div>
@@ -322,7 +338,7 @@ class ChooseCharacters extends Component {
                   <div className="panel panel-default">
                     <div className="panel-heading">Insects and Reptiles · 一般的な漢字</div>
                     <div className="panel-body selection-areas">
-                    {this.showGroupRows('insects_reptiles_kanji')}
+                    {this.showGroupRows('Insectes et Reptiles')}
                     </div>
                   </div>
                 </div>
@@ -335,7 +351,7 @@ class ChooseCharacters extends Component {
             <div className="panel panel-default">
               <div className="panel-heading">Halloween Kanji · ハロウィン漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('halloween_kanji')}
+                {this.showGroupRows('Halloween')}
               </div>
               <div className="panel-footer text-center">
                 <p></p>
@@ -345,7 +361,7 @@ class ChooseCharacters extends Component {
             <div className="panel panel-default">
               <div className="panel-heading">Planet Kanji · ハロウィン漢字</div>
               <div className="panel-body selection-areas">
-                {this.showGroupRows('planetes_kanji')}
+                {this.showGroupRows('Planètes')}
               </div>
               <div className="panel-footer text-center">
                 <p></p>

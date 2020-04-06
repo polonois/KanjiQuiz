@@ -27,7 +27,7 @@ while line :
 		 
 		kanji.write("\t\"" + keys[0].replace('_', ' ') + "\": {\n")
 		trad.write("\t\"" + keys[0].replace('_', ' ') + "\": {\n")
-		kanji.write("\t\t\"k_groupe0\": { characters: {")
+		kanji.write("\t\t\"k_groupe" + str(counter) + "\"" + ": { characters: {")
 		trad.write("\t\t\"trad_groupe0\": { characters: {")
 
 	if len(keys) >= 3:
