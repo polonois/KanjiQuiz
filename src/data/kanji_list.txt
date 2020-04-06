@@ -1,15 +1,58 @@
-commun_kanji
-犬　いぬ        chien
+Kanji_Communs_1
+人　ひと　    .   la.personne
+男　おとこ     .   l'homme
+女　おんな    .  la.femme
+子　こ        .  l'enfant
+日　ひ       .   le.soleil
+月　つき　　ゲツ  la.lune
+時　とき     .    le.temps
 水　みず　  スイ　eau
 火　ひ　   カ　  feu
 土　つち　  ド   terre
-木　き　   モク  bois
+木　き,こ　 モク  bois
 風　かぜ　  フ   vent
-number_kanji
-一　いち un
-ニ　に deux
-三　さん trois
+空　そら     .    le.ciel
+山　やま     .    la.montagne
+川　かわ     .    la.rivière
+花　はな     .    la.fleur
+雨　あめ     .    la.pluie
+雪　ゆき     .    la.neige
+金　かね     .    le.métal
+刀　かたな    .    le.sabre
 
+Kanji_Communs_2
+王国　オウコク .     le.royaume
+王女　オウジョ  .   la.princesse
+神殿　シンデン  .   le.temple
+炎　　ほのお    .        la.flamme
+夜　　よる      .       la.nuit
+歌　　うた　　　カ       le.chant
+谷　　たに      .       la.vallée
+神　　かみ      .       dieu
+神々　かみがみ   .       les.dieux
+森　　もり      .       la.forêt
+村　　むら      .       le.village
+平原　ヘイゲン   .     la.vallée
+
+Animaux_Domestiques
+犬　　いぬ    .    chien
+猫　　ねこ    .    chat
+鳥　　とり    .    oiseau
+魚　　さかな   .   poisson
+狸　　たぬき   .   tanuki
+兎　　うさぎ   .    lapin
+牛　　うし     .   vache
+羊　　ひつじ   .   mouton
+山羊　やぎ    .   chèvre
+豚　　ぶた    .  cochon
+馬　　うま    .    cheval
+鹿　　しか    .    cerf
+驢馬　ロバ    .    âne
+駱駝　ラクダ   .   dromadaire
+鶏　　にわとり  .    poule
+鼠　　ねずみ   .   souris
+栗鼠　リス . écureuil
+針鼠　はりねずみ .  hérisson
 
 Animaux_Sauvages
 狼 おおかみ loup
@@ -72,3 +115,57 @@ Halloween
 墓 はか tombe
 墓地 ボチ cimetière
 南瓜　かぼちゃ citrouille
+
+Jours_de_la_semaine
+曜日　　  ヨウび     .  jour.de.la.semaine
+日曜日　  ニチヨウび .   Dimanche    
+月曜日　  ゲツヨウび .   Lundi
+火曜日　  カヨウび   .   Mardi
+水曜日　  スイヨウび .    Mercredi
+木曜日　  モクヨウび .   Jeudi
+金曜日　  キンヨウび .   Vendredi
+土曜日　  ドヨウび   .  Samedi
+
+Planètes
+星　　　  ほし　　　     セイ L'astre
+太陽　　  タイヨウ       .    Le.Soleil
+月　　　  つき　　　     ゲツ La.Lune
+火星　　  カセイ         .    Mars
+水星　　  スイセイ       .     Mercure
+木星　　  モクセイ       .     Jupiter
+金星　　  キンセイ       .     Vénus
+土星　　  ドセイ         .    Saturne
+天王星　  テンノウセイ   .      Uranus
+海王星　  カイオウセイ   .      Neptune
+冥王星　  メイオウセイ   .      Pluton
+地球　　  チキュウ       .     La.Terre
+
+Les_Mois
+一月　  イチガツ       　.    Janvier
+二月　  ニガツ         　.   Février
+三月　  サンガツ       　.    Mars
+四月　  シガツ         　.   Avril
+五月　  ゴガツ         　.   Mai
+六月　  ロクガツ       　.   Juin
+七月　  シチガツ       　.   Juillet
+八月　  ハチガツ       　.   Août
+九月　  クガツ         　.   Septembre
+十月　  ジュウガツ     　.    Octobre
+十一月  ジュウイチガツ 　.      Novembre
+十二月  ジュウニガツ   　.     Décembre
+
+Les_Couleurs
+赤　　　あか　　　　    .　　rouge
+青　　　あお           .    bleu
+黄色　　きいろ          .    jaune
+紫　　　むらさき         .    violet
+緑　　　みどり          .    vert
+白　　　しろ           .    blanc
+黒　　　くろ            .   noir
+灰色　　はいいろ        .    gris
+茶色　　チャいろ        .    marron
+薄紫色　うすむらさきいろ   .    mauve
+紅　　　くれない        .    cramoisie
+水色　　みずいろ        .    bleu.clair
+虹色　　にじいろ        .    arc-en-ciel
+金色　　キンいろ　      .     or

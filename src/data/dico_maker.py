@@ -12,7 +12,7 @@ trad_content = []
 separator = ", "
 while line :
 	keys = line.split()
-	print(kanji_content) 
+	# print(kanji_content) 
 	if len(keys) == 1:
 		counter += 1
 
@@ -24,14 +24,15 @@ while line :
 			kanji.write("} } },\n")
 			trad.write("} } },\n") 
 
-		kanji.write("\t'" + keys[0] + "': {\n")
-		trad.write("\t'" + keys[0] + "': {\n")
-		kanji.write("\t\t'k_groupe0': { characters: {")
-		trad.write("\t\t'trad_groupe0': { characters: {")
+		 
+		kanji.write("\t\"" + keys[0].replace('_', ' ') + "\": {\n")
+		trad.write("\t\"" + keys[0].replace('_', ' ') + "\": {\n")
+		kanji.write("\t\t\"k_groupe0\": { characters: {")
+		trad.write("\t\t\"trad_groupe0\": { characters: {")
 
 	if len(keys) >= 3:
-		kanji_array = "'" + keys[1] + "': ['" + keys[0] + "'] "
-		trad_array = "'" + keys[-1] + "': ['" + keys[0] + "'] "
+		kanji_array = "\"" + keys[1] + "\": [\"" + keys[0] + "\"] "
+		trad_array = "\"" + keys[-1].replace('.', ' ') + "\": [\"" + keys[0] + ' ' + keys[1] + ' ' + keys[2] +  "\"] "
 		kanji_content.append(kanji_array)
 		trad_content.append(trad_array)
 	
