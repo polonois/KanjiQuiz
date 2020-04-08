@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Switch from 'react-toggle-switch';
 import { traductionDictionary } from '../../data/traductionDictionary';
 import './VocabularyList.scss';
@@ -15,39 +15,12 @@ class VocabularyList extends Component {
     for (var key in traductionDictionary) {
       name = key;
       for (var object_key in traductionDictionary[key]) {
-        cleanDict.push({key: name,value: traductionDictionary[key][object_key]['characters']});
-        //createTable(name, traductionDictionary[key][object_key]["characters"]);
+        cleanDict[name] = traductionDictionary[key][object_key]['characters'];
       }
     }
     console.log(cleanDict);
     return cleanDict;
   }
-
-  /*createTable(name, dict) {
-    
-                  <table className="table-striped">
-                    <thead>
-                    </thead>
-
-                    <tbody>
-                    </tbody>
-                  </table>
-  }
-
-  createHeaders(name) {
-    return (
-      <table className="table-striped">
-        <thead>
-          <tr>
-            <th>Kanji</th>
-            <th>Prononciation principale</th>
-            <th>Prononciation alternative</th>
-            <th>Traduction</th>
-          </tr>
-        </thead>)
-  }*/
-
-
 
   render() {
   var cleanDict = this.createTables();
@@ -56,31 +29,34 @@ class VocabularyList extends Component {
         <div className="container game">
           <div className="choose-characters">
             <div className="row">
-              <div className="col-xs-12">
-                <div className="panel panel-default">
-                  
+              {Object.entries(cleanDict).map(function([name, values])
+              {return <div className="col-xs-12">
+                <div className="panel panel-success">
+                  <div className="panel-heading">
+                    <h3 className="panel-title-custom">{name}</h3>
+                  </div>
                   <table className="table table-striped">
                     <thead>
                       <tr>
                         <th>Kanji</th>
-                        <th>Prononciation principale</th>
-                        <th>Prononciation alternative</th>
+                        <th>Prononciation 1</th>
+                        <th>Prononciation 2</th>
                         <th>Traduction</th>
                       </tr>
                     </thead>
 
                     <tbody>
-                        {Object.entries(traductionDictionary["Kanji Communs 1"]
-                        ["k_groupe1"]["characters"]).map(([key,value]) => 
-                        { return <tr>{value.map((value) =>
-                        { return <td>{value}</td>})}
+                        {Object.entries(values).map(function([key,value])
+                        { return <tr>{value.map(function(value1)
+                        { return <td className="boldTd">{value1}</td>})}
                         <td>{key}</td></tr>}
                         )}
                     </tbody>
                   </table>
-
                 </div>
               </div>
+              })}
+
             </div>
           </div>
         </div>
