@@ -27,7 +27,7 @@ class Navbar extends Component {
             <div id="navbar">
               <div className="navbar-header">
                 <a className="navbar-brand" href="javascript:;" onClick={this.props.handleEndGame}>
-                  Kanji Pro
+                  Learn-Kanji
                 </a>
               </div>
               <ul className="nav navbar-nav">
@@ -47,7 +47,7 @@ class Navbar extends Component {
             <div id="navbar">
               <div className="navbar-header">
                 <a className="navbar-brand" href="javascript:;" onClick={this.props.handleEndGame}>
-                  Kanji Pro
+                  Learn-Kanji
                 </a>
               </div>
               <ul className="nav navbar-nav">

@@ -237,8 +237,16 @@ class ChooseCharacters extends Component {
           <div className="col-xs-12">
             <div className="panel panel-default">
               <div className="panel-body welcome">
-                <h4>Welcome to Kanji Pro!</h4>
-                <p>Please choose the groups of characters that you'd like to be studying.</p>
+                <h4>Bienvenue sur Learn-Kanji !</h4>
+                <p>Choisissez les catégories de kanji que vous souhaitez étudier, 
+                  4 mini-jeux sont disponibles :</p>
+                <ul>
+                  <li>Trouvez les kanji correspondant aux kana.</li>
+                  <li>Trouvez les kana correspondant aux kanji.</li>
+                  <li>Écrivez la traduction du mot écrit en kana</li>
+                  <li>Écrivez la traduction du mot écrit en kanji</li>
+                </ul>
+                <p className="ganbatte">頑張って！</p>
               </div>
             </div>
           </div>
