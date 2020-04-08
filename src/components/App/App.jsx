@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Navbar from '../Navbar/Navbar';
+import VocabularyList from '../VocabularyList/VocabularyList';
 import GameContainer from '../GameContainer/GameContainer';
 import { removeHash } from '../../data/helperFuncs';
 
@@ -15,6 +16,10 @@ class App extends Component {
 
   endGame = () => {
     this.setState({gameState: 'chooseCharacters'});
+  }
+
+  traduction = () => {
+    this.setState({gameState: 'traduction'});
   }
 
   componentWillUpdate(nextProps, nextState) {
@@ -38,16 +43,23 @@ class App extends Component {
         <Navbar
           gameState={this.state.gameState}
           handleEndGame={this.endGame}
+          traductionEventFunction={this.traduction}
         />
-        <div className="outercontainer">
-          <div className="container game">
-            <GameContainer
-              gameState={this.state.gameState}
-              handleStartGame={this.startGame}
-              handleEndGame={this.endGame}
-            />
+        {this.state.gameState != "traduction" ? ( 
+          <div className="outercontainer">
+            <div className="container game">
+              <GameContainer
+                gameState={this.state.gameState}
+                handleStartGame={this.startGame}
+                handleEndGame={this.endGame}
+              />
+            </div>
           </div>
+          ) : 
+        <div>
+          <VocabularyList />
         </div>
+      }
       </div>
     )
   }

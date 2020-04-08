@@ -16,8 +16,11 @@
     display: none;
   }
 }
+.navbar-inverse .navbar-nav > .active > a {
+  background-color: #444444 !important;
+}
 .nav a {
-  color: #fff !important;
+  /*color: #fff !important;*/
 }
 .nav a:hover {
   color: #bbb !important;

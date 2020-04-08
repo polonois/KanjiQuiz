@@ -3,7 +3,6 @@ export function arrayContains(needle, haystack) {
 }
 
 export function removeFromArray(needle, haystack) {
-	console.log("coucou");
     if(typeof needle === 'object')
         needle = needle[0];
 
