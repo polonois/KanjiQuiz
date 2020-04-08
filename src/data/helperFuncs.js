@@ -3,6 +3,7 @@ export function arrayContains(needle, haystack) {
 }
 
 export function removeFromArray(needle, haystack) {
+	console.log("coucou");
     if(typeof needle === 'object')
         needle = needle[0];
 
@@ -28,6 +29,28 @@ export function findRomajisAtKanaKey(needle, kanaDictionary) {
     }, this);
     // console.log(romaji);
     return romaji;
+}
+
+export function findTraductionAtKanjiKey(needle, traductionDictionary, KanjiOrHiragana, decidedGroups) {
+	//console.log(needle);
+    let traduction = [];
+    Object.keys(traductionDictionary).map(function(whichKana) {
+    // console.log(whichKana); // 'hiragana' or 'katakana'
+        Object.keys(traductionDictionary[whichKana]).map(function(groupName) {
+            //console.log(groupName); // 'h_group1', ...
+			if(arrayContains(groupName, decidedGroups)) {
+		        Object.keys(traductionDictionary[whichKana][groupName]['characters']).map(function(key) {
+					//console.log(key);
+		            if(traductionDictionary[whichKana][groupName]['characters'][key][KanjiOrHiragana]==needle) {
+		                //console.log(traductionDictionary[whichKana][groupName]['characters'][key]);
+		                traduction = key;
+		            }
+		        }, this);
+			}
+        }, this);
+    }, this);
+    //console.log(traduction);
+    return traduction;
 }
 
     // whichKanaTypeIsThis(character, kanaDictionary) { // in case if needed later

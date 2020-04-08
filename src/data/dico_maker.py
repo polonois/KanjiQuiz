@@ -28,11 +28,11 @@ while line :
 		kanji.write("\t\"" + keys[0].replace('_', ' ') + "\": {\n")
 		trad.write("\t\"" + keys[0].replace('_', ' ') + "\": {\n")
 		kanji.write("\t\t\"k_groupe" + str(counter) + "\"" + ": { characters: {")
-		trad.write("\t\t\"trad_groupe0\": { characters: {")
+		trad.write("\t\t\"k_groupe" + str(counter) + "\"" + ": { characters: {")
 
 	if len(keys) >= 3:
 		kanji_array = "\"" + keys[1] + "\": [\"" + keys[0] + "\"] "
-		trad_array = "\"" + keys[-1].replace('.', ' ') + "\": [\"" + keys[0] + ' ' + keys[1] + ' ' + keys[2] +  "\"] "
+		trad_array = "\"" + keys[-1].replace('.', ' ') + "\": [\"" + keys[0] + '\", \"' + keys[1] + '\", \"' + keys[2] +  "\"] "
 		kanji_content.append(kanji_array)
 		trad_content.append(trad_array)
 	
