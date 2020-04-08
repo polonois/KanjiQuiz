@@ -55,66 +55,66 @@ Animaux_Domestiques
 針鼠　はりねずみ .  hérisson
 
 Animaux_Sauvages
-狼 おおかみ loup
-狐 きつね renard
-猪 いのしし sanglier
-熊 くま ours
-虎 とら tigre
-豹 ヒョウ léopard,.panthère
-猿 さる singe
-犀 サイ rhinocéros
-象 ゾウ éléphant
-海象 せいうち morse
-海豹 あざらし phoque
-縞馬 しまうま zèbre
-河馬 カバ hippopotame
-麒麟 キリン girafe
-恐竜 キョウリュウ dinosaure
+狼 おおかみ . loup
+狐 きつね . renard
+猪 いのしし . sanglier
+熊 くま . ours
+虎 とら . tigre
+豹 ヒョウ . léopard,.panthère
+猿 さる . singe
+犀 サイ . rhinocéros
+象 ゾウ . éléphant
+海象 せいうち . morse
+海豹 あざらし . phoque
+縞馬 しまうま . zèbre
+河馬 カバ . hippopotame
+麒麟 キリン . girafe
+恐竜 キョウリュウ . dinosaure
 
 Insectes_et_Reptiles
-虫 むし insecte
-亀 かめ tortue
-蛙 かえる grenouille
-蟻 あり fourmi
-蝿 はえ mouche
-蜂 はち abeille
-蚊 か moustique
-蝶 チョウ papillon
-蜻蛉 とんぼ libellule
-蝗 いなご sauterelle
-蜘蛛 くも araignée
-蠍 さそり scorpion
-黄金虫 こがねむし scarabée
-天道虫 テントウむし coccinelle
-毛虫 けむし chenille
-蝸牛 かたつむり escargot
-蛞蝓 なめくじ limace
-蛇 へび serpent
-蜥蜴 とかげ lézard
-鰐 わに crocodile
+虫 むし . insecte
+亀 かめ . tortue
+蛙 かえる . grenouille
+蟻 あり . fourmi
+蝿 はえ . mouche
+蜂 はち . abeille
+蚊 か . moustique
+蝶 チョウ . papillon
+蜻蛉 とんぼ . libellule
+蝗 いなご . sauterelle
+蜘蛛 くも . araignée
+蠍 さそり . scorpion
+黄金虫 こがねむし . scarabée
+天道虫 テントウむし . coccinelle
+毛虫 けむし . chenille
+蝸牛 かたつむり . escargot
+蛞蝓 なめくじ . limace
+蛇 へび . serpent
+蜥蜴 とかげ . lézard
+鰐 わに . crocodile
 
 Halloween
-怪物 カイブツ monstre
-満月 マンゲツ pleine.lune
-狼男 おおかみおとこ loup-garou
-悪魔 アクマ le.diable
-亡霊 ボウレイ fantôme
-吸血鬼 キュウケツキ vampire
-血 ち sang
-骨格 コッカク squelette
-骨 ほね os
-飴 あめ bonbon
-魔女 マジョ sorcière
-魔法使い マホウつかい sorcier
-仮装 カソウ déguisement
-箒 ほうき balai
-妖怪 ヨウカイ esprit
-物の怪 もののケ esprit
-仮面 カメン masque
-幽霊屋敷 ユウレイやしき maison.hantée
-墓 はか tombe
-墓地 ボチ cimetière
-南瓜　かぼちゃ citrouille
+怪物 カイブツ . monstre
+満月 マンゲツ . pleine.lune
+狼男 おおかみおとこ . loup-garou
+悪魔 アクマ . le.diable
+亡霊 ボウレイ . fantôme
+吸血鬼 キュウケツキ . vampire
+血 ち . sang
+骨格 コッカク . squelette
+骨 ほね . os
+飴 あめ . bonbon
+魔女 マジョ . sorcière
+魔法使い マホウつかい . sorcier
+仮装 カソウ . déguisement
+箒 ほうき . balai
+妖怪 ヨウカイ . esprit
+物の怪 もののケ . esprit
+仮面 カメン . masque
+幽霊屋敷 ユウレイやしき . maison.hantée
+墓 はか . tombe
+墓地 ボチ . cimetière
+南瓜　かぼちゃ . citrouille
 
 Jours_de_la_semaine
 曜日　　  ヨウび     .  jour.de.la.semaine
