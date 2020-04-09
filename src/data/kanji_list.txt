@@ -1,4 +1,4 @@
-Kanji_Communs_1
+Kanji_Communs_1_.漢字共通一
 人　ひと　    .   la.personne
 男　おとこ     .   l'homme
 女　おんな    .  la.femme
@@ -19,8 +19,9 @@ Kanji_Communs_1
 雪　ゆき     .    la.neige
 金　かね     .    le.métal
 刀　かたな    .    le.sabre
+玉　たま      .    la.boule
 
-Kanji_Communs_2
+Kanji_Communs_2_.漢字共通二
 王国　オウコク .     le.royaume
 王女　オウジョ  .   la.princesse
 神殿　シンデン  .   le.temple
@@ -34,7 +35,7 @@ Kanji_Communs_2
 村　　むら      .       le.village
 平原　ヘイゲン   .     la.vallée
 
-Animaux_Domestiques
+Animaux_Domestiques_.家畜
 犬　　いぬ    .    chien
 猫　　ねこ    .    chat
 鳥　　とり    .    oiseau
@@ -54,7 +55,7 @@ Animaux_Domestiques
 栗鼠　リス . écureuil
 針鼠　はりねずみ .  hérisson
 
-Animaux_Sauvages
+Animaux_Sauvages_.野生動物
 狼 おおかみ . loup
 狐 きつね . renard
 猪 いのしし . sanglier
@@ -71,7 +72,7 @@ Animaux_Sauvages
 麒麟 キリン . girafe
 恐竜 キョウリュウ . dinosaure
 
-Insectes_et_Reptiles
+Insectes_et_Reptiles_.昆虫と爬虫類
 虫 むし . insecte
 亀 かめ . tortue
 蛙 かえる . grenouille
@@ -93,7 +94,7 @@ Insectes_et_Reptiles
 蜥蜴 とかげ . lézard
 鰐 わに . crocodile
 
-Halloween
+Halloween_.ハロウィン
 怪物 カイブツ . monstre
 満月 マンゲツ . pleine.lune
 狼男 おおかみおとこ . loup-garou
@@ -116,7 +117,7 @@ Halloween
 墓地 ボチ . cimetière
 南瓜　かぼちゃ . citrouille
 
-Jours_de_la_semaine
+Jours_de_la_semaine_.曜日
 日曜日　  ニチヨウび .   Dimanche    
 月曜日　  ゲツヨウび .   Lundi
 火曜日　  カヨウび   .   Mardi
@@ -125,7 +126,7 @@ Jours_de_la_semaine
 金曜日　  キンヨウび .   Vendredi
 土曜日　  ドヨウび   .  Samedi
 
-Planètes
+Planètes_.惑星
 星　　　  ほし　　　     セイ L'astre
 太陽　　  タイヨウ       .    Le.Soleil
 月　　　  つき　　　     ゲツ La.Lune
@@ -139,7 +140,7 @@ Planètes
 冥王星　  メイオウセイ   .      Pluton
 地球　　  チキュウ       .     La.Terre
 
-Les_Mois
+Les_Mois_.月
 一月　  イチガツ       　.    Janvier
 二月　  ニガツ         　.   Février
 三月　  サンガツ       　.    Mars
@@ -153,7 +154,7 @@ Les_Mois
 十一月  ジュウイチガツ 　.      Novembre
 十二月  ジュウニガツ   　.     Décembre
 
-Les_Couleurs
+Les_Couleurs_.色
 赤　　　あか　　　　    .　　rouge
 青　　　あお           .    bleu
 黄色　　きいろ          .    jaune
@@ -168,3 +169,24 @@ Les_Couleurs
 水色　　みずいろ        .    bleu.clair
 虹色　　にじいろ        .    arc-en-ciel
 金色　　キンいろ　      .     or
+
+Les_bâtiments_de_la_ville_.施設の単語
+市役所　シヤクショ      .     la.mairie
+学校　　ガッコウ        .     l'école
+病院　　ビョウイン       .     l'hôpital
+薬屋　　くすりや        .     la.pharmacie
+銀行　　ギンコウ        .      la.banque
+警察　　ケイサ         .     la.police
+劇場　　ゲキジョウ       .  　le.théâtre   
+映画館　エイガカン       .    le.cinéma
+映画　　エイガ         .     le.film
+公園　　コウエン        .    le.parc
+動物園　ドウブツエン      .    le.zoo
+寺　　　てら           .    le.temple
+神社　　ジンジャ        .     le.sanctuaire
+教会　　キョウカイ       .     l'église
+店　　　みせ          .     le.magasin
+駅　　　エキ           .     la.gare
+港　　　みなと         .     le.port
+空港　　クウコウ        .      l'aéroport
+
