@@ -266,12 +266,9 @@ class ChooseCharacters extends Component {
           <div className="col-sm-6">
             {name_list_1.map((name) => {
             return <div className="panel panel-default">
-              <div className="panel-heading">{name}</div>
+              <div className="panel-heading panel-choose">{name}</div>
               <div className="panel-body selection-areas">
                 {this.showGroupRows(name)}
-              </div>
-              <div className="panel-footer text-center">
-                <p></p>
               </div>
             </div>
             })}
@@ -280,12 +277,9 @@ class ChooseCharacters extends Component {
           <div className="col-sm-6">
             {name_list_2.map((name) => {
             return <div className="panel panel-default">
-              <div className="panel-heading">{name}</div>
+              <div className="panel-heading panel-choose">{name}</div>
               <div className="panel-body selection-areas">
                 {this.showGroupRows(name)}
-              </div>
-              <div className="panel-footer text-center">
-                <p></p>
               </div>
             </div>
             })}
