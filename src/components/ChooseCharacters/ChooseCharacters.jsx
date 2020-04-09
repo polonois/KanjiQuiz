@@ -231,6 +231,16 @@ class ChooseCharacters extends Component {
   }
 
   render() {
+    var names = Object.keys(kanaDictionary);
+    var name_list_1 = [];
+    var name_list_2 = [];
+    var dict_length = names.length;
+    for (var i = 0; i < dict_length; i++) {
+      if (i < dict_length/2)
+        name_list_1.push(names[i]);
+      else
+        name_list_2.push(names[i]);
+    }
     return (
       <div className="choose-characters">
         <div className="row">
@@ -253,137 +263,33 @@ class ChooseCharacters extends Component {
         </div>
         <div className="row">
 
-
           <div className="col-sm-6">
-
-
-
-            <div className="panel panel-default">
-              <div className="panel-heading">Days & Months Kanji · 動物漢字</div>
+            {name_list_1.map((name) => {
+            return <div className="panel panel-default">
+              <div className="panel-heading">{name}</div>
               <div className="panel-body selection-areas">
-                <div className="col-sm-12">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">Days · 一般的な漢字</div>
-                    <div className="panel-body selection-areas">
-                    {this.showGroupRows('Kanji Communs 1')}
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-12">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">Months · 一般的な漢字</div>
-                    <div className="panel-body selection-areas">
-                    {this.showGroupRows('Kanji Communs 2')}
-                    </div>
-                  </div>
-                </div>
+                {this.showGroupRows(name)}
               </div>
               <div className="panel-footer text-center">
                 <p></p>
               </div>
             </div>
-
-            <div className="panel panel-default">
-              <div className="panel-heading">Days & Months Kanji · 動物漢字</div>
-              <div className="panel-body selection-areas">
-                <div className="col-sm-12">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">Days · 一般的な漢字</div>
-                    <div className="panel-body selection-areas">
-                    {this.showGroupRows('Jours de la semaine')}
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-12">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">Months · 一般的な漢字</div>
-                    <div className="panel-body selection-areas">
-                    {this.showGroupRows('Les Mois')}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="panel-footer text-center">
-                <p></p>
-              </div>
-            </div>
-
-            <div className="panel panel-default">
-              <div className="panel-heading">Colour Kanji · ハロウィン漢字</div>
-              <div className="panel-body selection-areas">
-                {this.showGroupRows('Les Couleurs')}
-              </div>
-              <div className="panel-footer text-center">
-                <p></p>
-              </div>
-            </div>
-
-
-          </div>
-          <div className="col-sm-6">
-
-
-            <div className="panel panel-default">
-              <div className="panel-heading">Animal Kanji · 動物漢字</div>
-              <div className="panel-body selection-areas">
-                <div className="col-sm-12">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">Common Animals · 一般的な漢字</div>
-                    <div className="panel-body selection-areas">
-                    {this.showGroupRows('Animaux Domestiques')}
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-12">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">Feral Animals · 一般的な漢字</div>
-                    <div className="panel-body selection-areas">
-                    {this.showGroupRows('Animaux Sauvages')}
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-12">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">Insects and Reptiles · 一般的な漢字</div>
-                    <div className="panel-body selection-areas">
-                    {this.showGroupRows('Insectes et Reptiles')}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="panel-footer text-center">
-                <p></p>
-              </div>
-            </div>
-
-            <div className="panel panel-default">
-              <div className="panel-heading">Halloween Kanji · ハロウィン漢字</div>
-              <div className="panel-body selection-areas">
-                {this.showGroupRows('Halloween')}
-              </div>
-              <div className="panel-footer text-center">
-                <p></p>
-              </div>
-            </div>
-
-            <div className="panel panel-default">
-              <div className="panel-heading">Planet Kanji · ハロウィン漢字</div>
-              <div className="panel-body selection-areas">
-                {this.showGroupRows('Planètes')}
-              </div>
-              <div className="panel-footer text-center">
-                <p></p>
-              </div>
-            </div>
-
-
+            })}
           </div>
 
-          
-
-
-
-
+          <div className="col-sm-6">
+            {name_list_2.map((name) => {
+            return <div className="panel panel-default">
+              <div className="panel-heading">{name}</div>
+              <div className="panel-body selection-areas">
+                {this.showGroupRows(name)}
+              </div>
+              <div className="panel-footer text-center">
+                <p></p>
+              </div>
+            </div>
+            })}
+          </div>
 
           <div className="col-sm-3 col-xs-12 pull-right">
             <span className="pull-right lock">Un seul niveau &nbsp;
