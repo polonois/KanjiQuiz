@@ -256,6 +256,9 @@ class ChooseCharacters extends Component {
                   <li>Écrivez la traduction du mot écrit en kana</li>
                   <li>Écrivez la traduction du mot écrit en kanji</li>
                 </ul>
+                <p className="bold">Attention ! Il est nécessaire de connaître les kana ! 
+                N'hésitez pas à vous entraîner sur le site <a href="https://kana.pro">kana.pro</a> si 
+                vous ne les connaissez pas encore.</p>
                 <p className="ganbatte">頑張って！</p>
               </div>
             </div>
