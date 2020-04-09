@@ -30,7 +30,7 @@ class Question extends Component {
 				for (var j = 0 ; j < this.askableKanaTradKeys.length, j != i ; j++) {
 					if (this.askableKanaTradKeys[j].localeCompare(this.askableKanaTradKeys[i]) == 0) {
 						doppleKanji.push(this.askableKanaTradKeys[i]);
-						console.log(doppleKanji);
+						// console.log(doppleKanji);
 					}
 				}
 			}
@@ -43,7 +43,7 @@ class Question extends Component {
 		else {
 			randomizedKanji = this.askableKanjiKeys.slice();	
 		}
-		console.log(randomizedKanji);
+		// console.log(randomizedKanji);
 
 		if(exclude && exclude.length > 0) {
 			randomizedKanji = removeFromArray(exclude, randomizedKanji);

@@ -18,7 +18,7 @@ class VocabularyList extends Component {
         cleanDict[name] = traductionDictionary[key][object_key]['characters'];
       }
     }
-    console.log(cleanDict);
+    // console.log(cleanDict);
     return cleanDict;
   }
 
