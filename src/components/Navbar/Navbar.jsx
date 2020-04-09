@@ -13,7 +13,7 @@ class Navbar extends Component {
               <ul className="nav navbar-nav">
                 <li id="nav-choosecharacters">
                   <a href="javascript:;" onClick={this.props.handleEndGame}>
-                    <span className="glyphicon glyphicon-small glyphicon-arrow-left"></span> Back to menu
+                    <span className="glyphicon glyphicon-small glyphicon-arrow-left"></span> Retour au menu
                   </a>
                 </li>
               </ul>

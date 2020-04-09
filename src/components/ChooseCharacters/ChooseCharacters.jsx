@@ -386,7 +386,7 @@ class ChooseCharacters extends Component {
 
 
           <div className="col-sm-3 col-xs-12 pull-right">
-            <span className="pull-right lock">Lock to stage &nbsp;
+            <span className="pull-right lock">Un seul niveau &nbsp;
               {
                 this.props.isLocked &&
                   <input className="stage-choice" type="number" min="1" max="4" maxLength="1" size="1"
@@ -401,13 +401,13 @@ class ChooseCharacters extends Component {
               this.state.errMsg != '' &&
                 <div className="error-message">{this.state.errMsg}</div>
             }
-            <button ref={c => this.startRef = c} className="btn btn-danger startgame-button" onClick={() => this.startGame()}>Start the Quiz!</button>
+            <button ref={c => this.startRef = c} className="btn btn-danger startgame-button" onClick={() => this.startGame()}>Commencer !</button>
           </div>
           <div className="down-arrow"
             style={{display: this.state.startIsVisible ? 'none' : 'block'}}
             onClick={(e) => this.scrollToStart(e)}
           >
-            Start
+            Jeu
           </div>
         </div>
       </div>

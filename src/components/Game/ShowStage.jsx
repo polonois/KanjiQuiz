@@ -29,24 +29,24 @@ class ShowStage extends Component {
     let stageDescription;
     let stageSecondaryDescription = false;
 
-    if(this.props.stage==1) stageDescription = 'Choose one';
-    else if(this.props.stage==2) { stageDescription = 'Choose one'; stageSecondaryDescription = 'Reverse'; }
-    else if(this.props.stage==3) stageDescription = 'Write the answer';
-    else if(this.props.stage==4) { stageDescription = 'Write the answer'; stageSecondaryDescription = 'Three at once'; }
+    if(this.props.stage==1) stageDescription = 'Choisissez le bon';
+    else if(this.props.stage==2) { stageDescription = 'Choisissez le bon'; stageSecondaryDescription = 'Inversé'; }
+    else if(this.props.stage==3) { stageDescription = 'Écrivez la réponse'; stageSecondaryDescription = 'À partir des kana'; }
+    else if(this.props.stage==4) { stageDescription = 'Écrivez la réponse'; stageSecondaryDescription = 'À partir des kanji'; }
     else if(this.props.stage==5)
       return (
         <div className="text-center show-end">
-          <h1>Congratulations!</h1>
-          <h3>You have passed all 4 stages.</h3>
-          <h4>Would you like to keep playing or go back to menu?</h4>
-          <p><button className="btn btn-danger keep-playing" onClick={()=>this.props.lockStage(4)}>Keep playing</button></p>
-          <p><button className="btn btn-danger back-to-menu" onClick={this.props.handleEndGame}>Back to menu</button></p>
+          <h1>Félicitations!</h1>
+          <h3>Vous avez réussi les 4 niveaux.</h3>
+          <h4>Désirez-vous continuer à jouer ou revenir au menu ?</h4>
+          <p><button className="btn btn-danger keep-playing" onClick={()=>this.props.lockStage(4)}>Continuer</button></p>
+          <p><button className="btn btn-danger back-to-menu" onClick={this.props.handleEndGame}>Revenir au menu</button></p>
         </div>
       );
 
     return (
       <div className="text-center show-stage">
-        <h1>Stage {this.props.stage}</h1>
+        <h1>Niveau {this.props.stage}</h1>
         <h3>{stageDescription}</h3>
         { stageSecondaryDescription ? <h4>{stageSecondaryDescription}</h4> : '' }
       </div>

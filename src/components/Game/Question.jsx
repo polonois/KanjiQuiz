@@ -247,8 +247,25 @@ class Question extends Component {
   getPreviousResult() {
     let resultString='';
     // console.log(this.previousAnswer);
-    if(this.previousQuestion=='')
-      resultString = <div className="previous-result none">Let's go! Which character is this?</div>
+    if(this.previousQuestion=='') {
+      if (this.props.stage==1) {
+        resultString = <div className="previous-result none">
+          Trouvez les kanji correspondant aux kana suivants :
+        </div>
+      } else if (this.props.stage==2) {
+        resultString = <div className="previous-result none">
+          Trouvez les kana correspondant aux kanji suivants :
+        </div>
+      } else if (this.props.stage==3) {
+        resultString = <div className="previous-result none">
+          Écrivez la traduction des mots suivants :
+        </div>
+      } else if (this.props.stage==4) {
+        resultString = <div className="previous-result none">
+          Écrivez la traduction des mots suivants :
+        </div>
+      }
+    }
     else {
       let rightAnswer = (
         this.props.stage==2 ?
@@ -368,7 +385,7 @@ class Question extends Component {
             aria-valuemax={quizSettings.stageLength[this.props.stage]}
             style={stageProgressPercentageStyle}
           >
-            <span>Stage {this.props.stage} {this.props.isLocked?' (Locked)':''}</span>
+          <span>Niveau {this.props.stage} {this.props.isLocked?' (verrouillé)':''}</span>
           </div>
         </div>
       </div>
