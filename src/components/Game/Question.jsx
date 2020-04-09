@@ -292,42 +292,41 @@ class Question extends Component {
   isInAllowedAnswers(previousAnswer) {
     // console.log(previousAnswer);
     // console.log(this.allowedAnswers);
-		if(this.props.stage == 3 || this.props.stage == 4) {
-			let prepo = ["le ", "la ", "les ", "du ","des ", "un ", "une ", "l'"];
-			let answers = this.previousAllowedAnswers.split(",");
-			previousAnswer = previousAnswer.replace(/[ ]+$/g, '');
-			for (var i = 0 ; i < answers.length ; i++) {
-				let words = answers[i].split(/\'|\ /);
-				let refinedAnswer = previousAnswer.split(/\'|\ /)
-				//console.log(words);
-				//console.log(previousAnswer);
-				for (var j = 0 ; j < prepo.length ; j++) {
-					if (words.length > 1 && refinedAnswer.length >1) {
-						if (prepo[j].concat(words[1]).localeCompare(previousAnswer) == 0) {
-							return true;
-						}
-					}
-					else if (words.length > 1) {
-						if (words[1].localeCompare(previousAnswer) == 0) {
-							return true;
-						}
-					}
-					else {
-						if (words[0].localeCompare(refinedAnswer[refinedAnswer.length -1]) == 0) {
-							return true;;
-						}
-						break;
-					}
-				}			
-			}
-			return false
-		}
-		
-		else {
-		  if(arrayContains(previousAnswer, this.previousAllowedAnswers))
-		    return true;
-		  else return false;
-		}
+    if(this.props.stage == 3 || this.props.stage == 4) {
+      let prepo = ["le ", "la ", "les ", "du ","des ", "un ", "une ", "l'"];
+      let answers = this.previousAllowedAnswers.toString().split(",");
+      previousAnswer = previousAnswer.replace(/[ ]+$/g, '');
+      for (var i = 0 ; i < answers.length ; i++) {
+        let words = answers[i].split(/\'|\ /);
+        let refinedAnswer = previousAnswer.split(/\'|\ /)
+        //console.log(words);
+        //console.log(previousAnswer);
+        for (var j = 0 ; j < prepo.length ; j++) {
+          if (words.length > 1 && refinedAnswer.length >1) {
+            if (prepo[j].concat(words[1]).localeCompare(previousAnswer) == 0) {
+                    return true;
+            }
+          }
+          else if (words.length > 1) {
+            if (words[1].localeCompare(previousAnswer) == 0) {
+                    return true;
+            }
+          }
+          else {
+            if (words[0].localeCompare(refinedAnswer[refinedAnswer.length -1]) == 0) {
+                    return true;;
+            }
+          }
+        }			
+      }
+      return false
+    }
+    
+    else {
+      if(arrayContains(previousAnswer, this.previousAllowedAnswers))
+        return true;
+      else return false;
+    }
   }
 
   handleAnswerChange = e => {
