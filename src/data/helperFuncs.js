@@ -12,18 +12,21 @@ export function removeFromArray(needle, haystack) {
     return haystack;
 }
 
-export function findRomajisAtKanaKey(needle, kanaDictionary) {
+export function findRomajisAtKanaKey(needle, kanaDictionary, decidedGroups) {
     let romaji = [];
+	//console.log(decidedGroups);
     Object.keys(kanaDictionary).map(function(whichKana) {
     // console.log(whichKana); // 'hiragana' or 'katakana'
         Object.keys(kanaDictionary[whichKana]).map(function(groupName) {
-            // console.log(groupName); // 'h_group1', ...
-            Object.keys(kanaDictionary[whichKana][groupName]['characters']).map(function(key) {
-                if(key==needle) {
-                    // console.log(kanaDictionary[whichKana][groupName]['characters'][key]);
-                    romaji = kanaDictionary[whichKana][groupName]['characters'][key];
-                }
-            }, this);
+            	//console.log(groupName); // 'h_group1', ...
+			if(arrayContains(groupName, decidedGroups)) {
+			    Object.keys(kanaDictionary[whichKana][groupName]['characters']).map(function(key) {
+			        if(key==needle) {
+			            // console.log(kanaDictionary[whichKana][groupName]['characters'][key]);
+			            romaji = kanaDictionary[whichKana][groupName]['characters'][key];
+			        }
+			    }, this);
+			}
         }, this);
     }, this);
     // console.log(romaji);

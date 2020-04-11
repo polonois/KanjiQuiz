@@ -60,19 +60,19 @@ class Question extends Component {
       randomizedKanji = randomizedKanji.slice(0,20);
 
       // let's remove kanas that have the same answer as included
-      let searchFor = findRomajisAtKanaKey(include, traductionDictionary)[0];
+      let searchFor = findRomajisAtKanaKey(include, traductionDictionary, this.props.decidedGroups)[0];
       randomizedKanji = randomizedKanji.filter(character => {
-        return searchFor!=findRomajisAtKanaKey(character, traductionDictionary)[0];
+        return searchFor!=findRomajisAtKanaKey(character, traductionDictionary, this.props.decidedGroups)[0];
       });
 
       // now let's remove "duplicate" kanas (if two kanas have same answers)
       let tempRandomizedKanji = randomizedKanji.slice();
       randomizedKanji = randomizedKanji.filter(r => {
         let dupeFound = false;
-        searchFor = findRomajisAtKanaKey(r, traductionDictionnary)[0];
+        searchFor = findRomajisAtKanaKey(r, traductionDictionnary, this.props.decidedGroups)[0];
         tempRandomizedKanji.shift();
         tempRandomizedKanji.forEach(w => {
-          if(findRomajisAtKanaKey(w, traductionDictionnary)[0]==searchFor)
+          if(findRomajisAtKanaKey(w, traductionDictionnary, this.props.decidedGroups)[0]==searchFor)
             dupeFound = true;
         });
         return !dupeFound;
@@ -93,6 +93,7 @@ class Question extends Component {
 
   getRandomKanas(amount, include, exclude) {
     let randomizedKanas = this.askableKanaKeys.slice();
+    //console.log(randomizedKanas)
 
     if(exclude && exclude.length > 0) {
       // we're excluding previous question when deciding a new question
@@ -110,19 +111,19 @@ class Question extends Component {
       randomizedKanas = randomizedKanas.slice(0,20);
 
       // let's remove kanas that have the same answer as included
-      let searchFor = findRomajisAtKanaKey(include, kanaDictionary)[0];
+      let searchFor = findRomajisAtKanaKey(include, kanaDictionary, this.props.decidedGroups)[0];
       randomizedKanas = randomizedKanas.filter(character => {
-        return searchFor!=findRomajisAtKanaKey(character, kanaDictionary)[0];
+        return searchFor!=findRomajisAtKanaKey(character, kanaDictionary, this.props.decidedGroups)[0];
       });
 
       // now let's remove "duplicate" kanas (if two kanas have same answers)
       let tempRandomizedKanas = randomizedKanas.slice();
       randomizedKanas = randomizedKanas.filter(r => {
         let dupeFound = false;
-        searchFor = findRomajisAtKanaKey(r, kanaDictionary)[0];
+        searchFor = findRomajisAtKanaKey(r, kanaDictionary, this.props.decidedGroups)[0];
         tempRandomizedKanas.shift();
         tempRandomizedKanas.forEach(w => {
-          if(findRomajisAtKanaKey(w, kanaDictionary)[0]==searchFor)
+          if(findRomajisAtKanaKey(w, kanaDictionary, this.props.decidedGroups)[0]==searchFor)
             dupeFound = true;
         });
         return !dupeFound;
@@ -156,22 +157,22 @@ class Question extends Component {
   setAnswerOptions() {
     this.answerOptions = this.getRandomKanas(3, this.currentQuestion[0], false);
     this.setState({answerOptions: this.answerOptions});
-    // console.log(this.answerOptions);
+     //console.log(this.answerOptions);
   }
 
   setAllowedAnswers() {
-    // console.log(this.currentQuestion);
+     //console.log(this.currentQuestion);
     this.allowedAnswers = [];
     if(this.props.stage==1 )
-      this.allowedAnswers = findRomajisAtKanaKey(this.currentQuestion, kanaDictionary)
-		else if (this.props.stage==4)
-			this.allowedAnswers = findTraductionAtKanjiKey(this.currentQuestion, traductionDictionary, 0, this.props.decidedGroups)
+      this.allowedAnswers = findRomajisAtKanaKey(this.currentQuestion, kanaDictionary, this.props.decidedGroups)
+    else if (this.props.stage==4)
+      this.allowedAnswers = findTraductionAtKanjiKey(this.currentQuestion, traductionDictionary, 0, this.props.decidedGroups)
     else if(this.props.stage==2)
       this.allowedAnswers = this.currentQuestion;
     else if(this.props.stage==3) {
 			this.allowedAnswers = findTraductionAtKanjiKey(this.currentQuestion, traductionDictionary, 1, this.props.decidedGroups)
     }
-    // console.log(this.allowedAnswers);
+     //console.log(this.allowedAnswers);
   }
 
   handleAnswer = answer => {
@@ -240,7 +241,7 @@ class Question extends Component {
 
   getShowableQuestion() {
     if(this.getAnswerType()=='kana')
-      return findRomajisAtKanaKey(this.state.currentQuestion, kanaDictionary)[0];
+      return findRomajisAtKanaKey(this.state.currentQuestion, kanaDictionary, this.props.decidedGroups)[0];
     else return this.state.currentQuestion;
   }
 
@@ -269,7 +270,7 @@ class Question extends Component {
     else {
       let rightAnswer = (
         this.props.stage==2 ?
-          findRomajisAtKanaKey(this.previousQuestion, kanaDictionary)[0]
+          findRomajisAtKanaKey(this.previousQuestion, kanaDictionary, this.props.decidedGroups)[0]
           : this.previousQuestion.join('')
         )+' = '+ this.previousAllowedAnswers;
 
@@ -365,6 +366,7 @@ class Question extends Component {
               this.state.answerOptions.map((answer, idx) => {
                 return <AnswerButton answer={answer}
                   className={btnClass}
+		  groups={this.props.decidedGroups}
                   key={idx}
                   answertype={this.getAnswerType()}
                   handleAnswer={this.handleAnswer} />
@@ -395,8 +397,9 @@ class Question extends Component {
 
 class AnswerButton extends Component {
   getShowableAnswer() {
-    if(this.props.answertype=='romaji')
-      return findRomajisAtKanaKey(this.props.answer, kanaDictionary)[0];
+    if(this.props.answertype=='romaji') {
+      return findRomajisAtKanaKey(this.props.answer, kanaDictionary, this.props.groups)[0];
+    }
     else return this.props.answer;
   }
 
