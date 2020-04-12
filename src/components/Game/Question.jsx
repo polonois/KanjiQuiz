@@ -294,35 +294,72 @@ class Question extends Component {
     // console.log(previousAnswer);
     // console.log(this.allowedAnswers);
     if(this.props.stage == 3 || this.props.stage == 4) {
-      let prepo = ["le ", "la ", "les ", "du ","des ", "un ", "une ", "l'"];
+      let prepo = ["le", "la", "les", "du","des", "un", "une", "l"];
       let answers = this.previousAllowedAnswers.toString().split(",");
       previousAnswer = previousAnswer.replace(/[ ]+$/g, '');
       for (var i = 0 ; i < answers.length ; i++) {
+				let good_answer_prepo = false;
+        let answer_prepo = false;
         let words = answers[i].split(/\'|\ /);
-        let refinedAnswer = previousAnswer.split(/\'|\ /)
-        //console.log(words);
-        //console.log(previousAnswer);
-        for (var j = 0 ; j < prepo.length ; j++) {
+        let refinedAnswer = previousAnswer.split(/\'|\ /);
+				//console.log(refinedAnswer);
+				//console.log(words);
+				for (var j= 0; j < prepo.length ; j++) {
+					if(!prepo[j].localeCompare(words[0])) {
+						good_answer_prepo = true;
+					}
+					if(!prepo[j].localeCompare(refinedAnswer[0])) {
+						answer_prepo = true;
+					}
+				}
+				//console.log(good_answer_prepo);
+				//console.log(answer_prepo);
+				if (good_answer_prepo && answer_prepo) {
+					words = words.slice(1);
+					refinedAnswer = refinedAnswer.slice(1);
+					if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
+						return true;
+					}
+				}
+				if (!good_answer_prepo && answer_prepo) {
+					refinedAnswer = refinedAnswer.slice(1);
+					if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
+						return true;
+					}
+				}
+				if (good_answer_prepo && !answer_prepo) {
+					words = words.slice(1);
+					if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
+						return true;
+					}
+				}
+				if (!good_answer_prepo && !answer_prepo) {
+					if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+        /*for (var j = 0 ; j < prepo.length ; j++) {
           if (words.length > 1 && refinedAnswer.length >1) {
-            if (prepo[j].concat(words[1]).localeCompare(previousAnswer) == 0) {
+	    words = words.slice(1);
+            if (prepo[j].concat(words).localeCompare(previousAnswer) == 0) {
                     return true;
             }
           }
           else if (words.length > 1) {
-            if (words[1].localeCompare(previousAnswer) == 0) {
+	    words = words.slice(1);
+            if (words.localeCompare(previousAnswer) == 0) {
                     return true;
             }
           }
           else {
-            if (words[0].localeCompare(refinedAnswer[refinedAnswer.length -1]) == 0) {
+	    refinedAnswer = refinedAnswer.slice(1);
+            if (words[0].localeCompare(refinedAnswer.toString()) == 0) {
                     return true;;
             }
-          }
-        }			
-      }
-      return false
-    }
-    
+          }*/    
     else {
       if(arrayContains(previousAnswer, this.previousAllowedAnswers))
         return true;
