@@ -31,8 +31,8 @@ class ShowStage extends Component {
 
     if(this.props.stage==1) stageDescription = 'Choisissez le bon';
     else if(this.props.stage==2) { stageDescription = 'Choisissez le bon'; stageSecondaryDescription = 'Inversé'; }
-    else if(this.props.stage==3) { stageDescription = 'Écrivez la réponse'; stageSecondaryDescription = 'À partir des kana'; }
-    else if(this.props.stage==4) { stageDescription = 'Écrivez la réponse'; stageSecondaryDescription = 'À partir des kanji'; }
+    else if(this.props.stage==3) { stageDescription = 'Écrivez la traduction'; stageSecondaryDescription = 'À partir des kana'; }
+    else if(this.props.stage==4) { stageDescription = 'Écrivez la traduction'; stageSecondaryDescription = 'À partir des kanji'; }
     else if(this.props.stage==5)
       return (
         <div className="text-center show-end">

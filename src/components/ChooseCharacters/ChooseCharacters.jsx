@@ -256,8 +256,9 @@ class ChooseCharacters extends Component {
                   <li>Écrivez la traduction du mot écrit en kana</li>
                   <li>Écrivez la traduction du mot écrit en kanji</li>
                 </ul>
+                <p>Les listes de vocabulaire sont celles proposées par <b>Julien Fontanier</b> sur ses cours de japonais en ligne <a href="https://www.youtube.com/channel/UChFfLNTK64xQj7NscGmLLLg" rel="noopener noreferrer" target="_blank">Cours de japonais</a>.</p>
                 <p className="bold">Attention ! Il est nécessaire de connaître les kana ! 
-                N'hésitez pas à vous entraîner sur le site <a href="https://kana.pro">kana.pro</a> si 
+                N'hésitez pas à vous entraîner sur le site <a href="https://kana.pro" rel="noopener noreferrer" target="_blank">kana.pro</a> si 
                 vous ne les connaissez pas encore.</p>
                 <p className="ganbatte">頑張って！</p>
               </div>
@@ -289,7 +290,7 @@ class ChooseCharacters extends Component {
           </div>
 
           <div className="col-sm-3 col-xs-12 pull-right">
-            <span className="pull-right lock">Un seul niveau &nbsp;
+            <span className="pull-right lock">Faire un seul niveau &nbsp;
               {
                 this.props.isLocked &&
                   <input className="stage-choice" type="number" min="1" max="4" maxLength="1" size="1"
