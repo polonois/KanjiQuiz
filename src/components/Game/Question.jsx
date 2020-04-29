@@ -20,37 +20,37 @@ class Question extends Component {
     // this.handleSubmit = this.handleSubmit.bind(this);
   // }
 
-	getRandomKanji(amount, include, exclude, KanjiOrHiragana) {
-		let randomizedKanji = [];
+        getRandomKanji(amount, include, exclude, KanjiOrHiragana) {
+                let randomizedKanji = [];
 
-		if (KanjiOrHiragana == 1) {
-			randomizedKanji = this.askableKanaTradKeys.slice();
-			let doppleKanji = []
-			for (var i = 0 ; i < this.askableKanaTradKeys.length; i++) {
-				for (var j = 0 ; j < this.askableKanaTradKeys.length, j != i ; j++) {
-					if (this.askableKanaTradKeys[j].localeCompare(this.askableKanaTradKeys[i]) == 0) {
-						doppleKanji.push(this.askableKanaTradKeys[i]);
-						// console.log(doppleKanji);
-					}
-				}
-			}
-			for (var w = 0; w < doppleKanji.length ; w++) {
-				while (arrayContains(doppleKanji[w], randomizedKanji)) {
-					randomizedKanji = removeFromArray(doppleKanji[w], randomizedKanji);
-				}
-			}
-		}
-		else {
-			randomizedKanji = this.askableKanjiKeys.slice();	
-		}
-		// console.log(randomizedKanji);
+                if (KanjiOrHiragana == 1) {
+                        randomizedKanji = this.askableKanaTradKeys.slice();
+                        let doppleKanji = []
+                        for (var i = 0 ; i < this.askableKanaTradKeys.length; i++) {
+                                for (var j = 0 ; j < this.askableKanaTradKeys.length, j != i ; j++) {
+                                        if (this.askableKanaTradKeys[j].localeCompare(this.askableKanaTradKeys[i]) == 0) {
+                                                doppleKanji.push(this.askableKanaTradKeys[i]);
+                                                // console.log(doppleKanji);
+                                        }
+                                }
+                        }
+                        for (var w = 0; w < doppleKanji.length ; w++) {
+                                while (arrayContains(doppleKanji[w], randomizedKanji)) {
+                                        randomizedKanji = removeFromArray(doppleKanji[w], randomizedKanji);
+                                }
+                        }
+                }
+                else {
+                        randomizedKanji = this.askableKanjiKeys.slice();        
+                }
+                // console.log(randomizedKanji);
 
-		if(exclude && exclude.length > 0) {
-			randomizedKanji = removeFromArray(exclude, randomizedKanji);
-		}
-		
-		if(include && include.length > 0) {
-			// we arrive here when we're deciding answer options (included = currentQuestion)
+                if(exclude && exclude.length > 0) {
+                        randomizedKanji = removeFromArray(exclude, randomizedKanji);
+                }
+                
+                if(include && include.length > 0) {
+                        // we arrive here when we're deciding answer options (included = currentQuestion)
 
       // remove included kana
       randomizedKanji = removeFromArray(include, randomizedKanji);
@@ -89,7 +89,7 @@ class Question extends Component {
     }
     return randomizedKanji;
 
-	}
+        }
 
   getRandomKanas(amount, include, exclude) {
     let randomizedKanas = this.askableKanaKeys.slice();
@@ -144,10 +144,10 @@ class Question extends Component {
   setNewQuestion() {
     if(this.props.stage==1 || this.props.stage==2)
       this.currentQuestion = this.getRandomKanas(1, false, this.previousQuestion);
-		else if(this.props.stage == 4)
-			this.currentQuestion = this.getRandomKanji(1, false, this.previousQuestion, 0);
+                else if(this.props.stage == 4)
+                        this.currentQuestion = this.getRandomKanji(1, false, this.previousQuestion, 0);
     else
-			this.currentQuestion = this.getRandomKanji(1, false, this.previousQuestion, 1);
+                        this.currentQuestion = this.getRandomKanji(1, false, this.previousQuestion, 1);
     this.setState({currentQuestion: this.currentQuestion});
     this.setAnswerOptions();
     this.setAllowedAnswers();
@@ -170,7 +170,7 @@ class Question extends Component {
     else if(this.props.stage==2)
       this.allowedAnswers = this.currentQuestion;
     else if(this.props.stage==3) {
-			this.allowedAnswers = findTraductionAtKanjiKey(this.currentQuestion, traductionDictionary, 1, this.props.decidedGroups)
+                        this.allowedAnswers = findTraductionAtKanjiKey(this.currentQuestion, traductionDictionary, 1, this.props.decidedGroups)
     }
      //console.log(this.allowedAnswers);
   }
@@ -195,22 +195,22 @@ class Question extends Component {
   }
 
   initializeCharacters() {
-		this.askableKanji = {};
-		this.askableKanjiKeys = [];
-		this.askableKanaTradKeys = [];
+                this.askableKanji = {};
+                this.askableKanjiKeys = [];
+                this.askableKanaTradKeys = [];
     this.askableKanas = {};
     this.askableKanaKeys = [];
     this.askableRomajis = [];
     this.previousQuestion = '';
     this.previousAnswer = '';
     this.stageProgress = 0;
-		Object.keys(traductionDictionary).forEach(whichKana => {
-			Object.keys(traductionDictionary[whichKana]).forEach(groupName => {
-				if(arrayContains(groupName, this.props.decidedGroups)) {
-					this.askableKanji = Object.assign(this.askableKanji, traductionDictionary[whichKana][groupName]['characters']);
-						Object.keys(traductionDictionary[whichKana][groupName]['characters']).forEach(key => {
-							this.askableKanjiKeys.push(traductionDictionary[whichKana][groupName]['characters'][key][0]);
-							this.askableKanaTradKeys.push(traductionDictionary[whichKana][groupName]['characters'][key][1]);
+                Object.keys(traductionDictionary).forEach(whichKana => {
+                        Object.keys(traductionDictionary[whichKana]).forEach(groupName => {
+                                if(arrayContains(groupName, this.props.decidedGroups)) {
+                                        this.askableKanji = Object.assign(this.askableKanji, traductionDictionary[whichKana][groupName]['characters']);
+                                                Object.keys(traductionDictionary[whichKana][groupName]['characters']).forEach(key => {
+                                                        this.askableKanjiKeys.push(traductionDictionary[whichKana][groupName]['characters'][key][0]);
+                                                        this.askableKanaTradKeys.push(traductionDictionary[whichKana][groupName]['characters'][key][1]);
           });
         }
       });
@@ -295,72 +295,53 @@ class Question extends Component {
     // console.log(this.allowedAnswers);
     if(this.props.stage == 3 || this.props.stage == 4) {
       let prepo = ["le", "la", "les", "du","des", "un", "une", "l"];
-      let answers = this.previousAllowedAnswers.toString().split(",");
+      // Remove optional information parentheses and split with the comma
+      let answers = this.previousAllowedAnswers.toString().replace(/ \(.*?\)|\(.*?\)/g,'').split(/, |,/);
       previousAnswer = previousAnswer.replace(/[ ]+$/g, '');
       for (var i = 0 ; i < answers.length ; i++) {
-				let good_answer_prepo = false;
+                                let good_answer_prepo = false;
         let answer_prepo = false;
         let words = answers[i].split(/\'|\ /);
         let refinedAnswer = previousAnswer.split(/\'|\ /);
-				//console.log(refinedAnswer);
-				//console.log(words);
-				for (var j= 0; j < prepo.length ; j++) {
-					if(!prepo[j].localeCompare(words[0])) {
-						good_answer_prepo = true;
-					}
-					if(!prepo[j].localeCompare(refinedAnswer[0])) {
-						answer_prepo = true;
-					}
-				}
-				//console.log(good_answer_prepo);
-				//console.log(answer_prepo);
-				if (good_answer_prepo && answer_prepo) {
-					words = words.slice(1);
-					refinedAnswer = refinedAnswer.slice(1);
-					if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
-						return true;
-					}
-				}
-				if (!good_answer_prepo && answer_prepo) {
-					refinedAnswer = refinedAnswer.slice(1);
-					if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
-						return true;
-					}
-				}
-				if (good_answer_prepo && !answer_prepo) {
-					words = words.slice(1);
-					if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
-						return true;
-					}
-				}
-				if (!good_answer_prepo && !answer_prepo) {
-					if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
-						return true;
-					}
-				}
-			}
-			return false;
-		}
-        /*for (var j = 0 ; j < prepo.length ; j++) {
-          if (words.length > 1 && refinedAnswer.length >1) {
-	    words = words.slice(1);
-            if (prepo[j].concat(words).localeCompare(previousAnswer) == 0) {
-                    return true;
-            }
+        console.log(refinedAnswer);
+        console.log(words);
+        for (var j= 0; j < prepo.length ; j++) {
+          if(!prepo[j].localeCompare(words[0])) {
+            good_answer_prepo = true;
           }
-          else if (words.length > 1) {
-	    words = words.slice(1);
-            if (words.localeCompare(previousAnswer) == 0) {
-                    return true;
-            }
+          if(!prepo[j].localeCompare(refinedAnswer[0])) {
+            answer_prepo = true;
           }
-          else {
-	    refinedAnswer = refinedAnswer.slice(1);
-            if (words[0].localeCompare(refinedAnswer.toString()) == 0) {
-                    return true;;
-            }
-          }*/    
-    else {
+        }
+        console.log(good_answer_prepo);
+        console.log(answer_prepo);
+        if (good_answer_prepo && answer_prepo) {
+          words = words.slice(1);
+          refinedAnswer = refinedAnswer.slice(1);
+          if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
+            return true;
+          }
+        }
+        if (!good_answer_prepo && answer_prepo) {
+          refinedAnswer = refinedAnswer.slice(1);
+          if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
+            return true;
+          }
+        }
+        if (good_answer_prepo && !answer_prepo) {
+          words = words.slice(1);
+          if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
+            return true;
+          }
+        }
+        if (!good_answer_prepo && !answer_prepo) {
+          if (words.toString().localeCompare(refinedAnswer.toString()) == 0) {
+            return true;
+          }
+        }
+      }
+      return false;
+    } else {
       if(arrayContains(previousAnswer, this.previousAllowedAnswers))
         return true;
       else return false;
@@ -403,7 +384,7 @@ class Question extends Component {
               this.state.answerOptions.map((answer, idx) => {
                 return <AnswerButton answer={answer}
                   className={btnClass}
-		  groups={this.props.decidedGroups}
+                  groups={this.props.decidedGroups}
                   key={idx}
                   answertype={this.getAnswerType()}
                   handleAnswer={this.handleAnswer} />
