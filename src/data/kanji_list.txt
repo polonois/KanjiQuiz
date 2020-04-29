@@ -127,9 +127,9 @@ Jours_de_la_semaine_·_曜日
 土曜日　  ドヨウび   .  Samedi
 
 Planètes_·_惑星
-星　　　  ほし　　　     セイ L'astre
-太陽　　  タイヨウ       .    Le.Soleil
-月　　　  つき　　　     ゲツ La.Lune
+星　　　  ほし　　　     セイ l'astre
+太陽　　  タイヨウ       .    le.Soleil
+月　　　  つき　　　     ゲツ la.Lune
 火星　　  カセイ         .    Mars
 水星　　  スイセイ       .     Mercure
 木星　　  モクセイ       .     Jupiter
@@ -138,7 +138,7 @@ Planètes_·_惑星
 天王星　  テンノウセイ   .      Uranus
 海王星　  カイオウセイ   .      Neptune
 冥王星　  メイオウセイ   .      Pluton
-地球　　  チキュウ       .     La.Terre
+地球　　  チキュウ       .     la.Terre
 
 Les_Mois_·_月
 一月　  イチガツ       　.    Janvier
