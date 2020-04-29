@@ -9,7 +9,7 @@ Kanji_Communs_1_·_漢字共通一
 水　みず　  スイ　eau
 火　ひ　   カ　  feu
 土　つち　  ド   terre
-木　き,こ　 モク  bois
+木　き,こ　 モク  bois,.l'arbre
 風　かぜ　  フ   vent
 空　そら     .    le.ciel
 山　やま     .    la.montagne
@@ -17,7 +17,7 @@ Kanji_Communs_1_·_漢字共通一
 花　はな     .    la.fleur
 雨　あめ     .    la.pluie
 雪　ゆき     .    la.neige
-金　かね     .    le.métal
+金　かね     .    le.métal,.l'argent
 刀　かたな    .    le.sabre
 玉　たま      .    la.boule
 
@@ -190,7 +190,7 @@ Les_bâtiments_de_la_ville_·_施設の単語
 港　　　みなと         .     le.port
 空港　　クウコウ        .      l'aéroport
 
-Adjectifs_en_i_courants_·_一般的な形容詞
+Adjectifs_en_い_courants_·_一般的な形容詞
 楽しい       たのしい          . agréable,.amusant,.joyeux
 優しい       やさしい          . aimable
 可笑しい     おかしい          . amusant,.marrant,.drôle
@@ -225,7 +225,7 @@ Adjectifs_en_i_courants_·_一般的な形容詞
 早い         はやい            . tôt
 悲しい       かなしい          . triste
 
-Autres_adjectifs_en_i_(1)_·_形容詞一
+Autres_adjectifs_en_い_(1)_·_形容詞一
 憎い         にくい            . abominable,.détestable,.odieux
 愛らしい     あいらしい        . adorable
 態とらしい   わざとらしい      . affecté
@@ -257,7 +257,7 @@ Autres_adjectifs_en_i_(1)_·_形容詞一
 怖い         こわい            . effrayant
 眩しい       まぶしい          . éblouissant,.éclatant,.radieux
 
-Autres_adjectifs_en_i_(2)_·_形容詞二
+Autres_adjectifs_en_い_(2)_·_形容詞二
 遠い         とおい            . éloigné
 儚い         はかない          . éphémère
 幅広い       はばひろい        . étendu
@@ -288,7 +288,7 @@ Autres_adjectifs_en_i_(2)_·_形容詞二
 男らしい     おとこらしい      . masculin
 悪い         わるい            . mauvais
 
-Autres_adjectifs_en_i_(3)_·_形容詞三
+Autres_adjectifs_en_い_(3)_·_形容詞三
 柔らかい     やわらかい        . mou
 怪しい       あやしい          . mystérieux,.suspect
 多い         おおい            . nombreux
@@ -319,3 +319,52 @@ Autres_adjectifs_en_i_(3)_·_形容詞三
 勇ましい     いさましい        . vaillant
 古い         ふるい            . vieux
 激しい       はげしい          . violent,.furieux
+
+Les_adjectifs_en_な_(1)·_形容動詞一
+鮮やか　　あざやか           .   vif,.doué
+本当　　　ほんとう           .   vrai
+吝嗇　　　りんしょく     .      avare
+馬鹿　　　ばか        .      bête,.idiot
+親切　　　しんせつ      .     bienveillant
+勇敢　　　ゆうかん      .     brave
+静か　　　しずか        .     calme,.silencieux
+有名　　　ゆうめい      .     célèbre,.fameux
+残酷　　　ざんこく       .     cruel 
+嫌　　　　いや          .    détestable
+退屈　　　たいくつ       .     ennuyeux
+贋　　　　にせ           .   faux
+迷惑厄介　めいわくやっかい   .   gênant 
+寛大　　　かんだい        .    généreux
+無料　　　むりょう         .    gratuit
+利口　　　りこう          .    habile
+大切　　　たいせつ        .    important
+壮大　　　そうだい         .    imposant
+有料　　　ゆうりょう         .   payant
+駄目　　　だめ            .    inutile
+綺麗　　　きれい           .   joli,.propre
+自由　　　じゆう           .    libre
+立派　　　りっぱ           .    magnifique,.majestueux,.superbe
+病気　　　びょうき          .    malade
+邪悪　　　じゃあく          .    malfaisant
+意地悪　　いじわる          .   mauvais
+不思議　　ふしぎ           .   merveilleux,.mystérieux
+
+Les_adjectifs_en_な_(2)·_形容動詞二
+格好悪い　かっこわるい    .   inattrayant
+無敵　　　むてき        .   invincible
+お洒落　　おしゃれ       .   à.la.mode
+国際　　　こくさい       .   national
+素敵　　　すてき        .   ravissant,.superbe
+柔軟　　　じゅうなん      .   souple
+愚か阿保　おろかあほ     .    stupide
+暇　　　　ひま         .     vacant
+絶対　　　ぜったい       .    absolu
+純然　　　じゅんぜん     .    absolu,.complet,.pur
+大それた　　だいそれた    .    absurde,.outrageant
+凶悪　　　きょあく       .    atroce,.féroce
+条件付き　じょけんつき    .    conditionnel
+明確　　　めいかく      .    défini
+大胆　　　だいたん      .    hardi
+無条件　　むじょうけん    .    inconditionnel
+有耶無耶　うやむや      .    indéfini
+敬虔　　　けいけん      .    pieux
