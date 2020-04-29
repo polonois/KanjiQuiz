@@ -240,10 +240,10 @@ Autres_adjectifs_en_i_(1)_·_形容詞一
 輝かしい     かがやかしい      . brillant
 熱い         あつい            . brûlant
 愛しい       いとしい          . charmant,.ravissant
-暖かい       あたたかい        . chaud(météo)
-温かい       あたたかい        . chaud(objet,sentiment)
+暖かい       あたたかい        . chaud.(météo)
+温かい       あたたかい        . chaud.(objet,sentiment)
 丸い         まるい            . circulaire,.rond
-明るい       あかるい          . clair(éclairé)
+明るい       あかるい          . clair.(éclairé)
 正しい       ただしい          . correct,.juste
 勇ましい     いさましい        . courageux
 短い         みじかい          . court
@@ -267,9 +267,9 @@ Autres_adjectifs_en_i_(2)_·_形容詞二
 弱い         よわい            . faible,.fragile
 素晴らしい   すばらしい        . fantastique
 女らしい     おんならしい      . féminin
-臭い         くさい            . fétide,nauséabond;suspect
-涼しい       すずしい          . frais(météo)
-冷たい       つめたい          . frais(objet)
+臭い         くさい            . fétide,.nauséabond,.suspect
+涼しい       すずしい          . frais.(météo)
+冷たい       つめたい          . frais.(objet)
 悔しい       くやしい          . frustrant,.regrettable,.vexant
 凄い         すごい            . génial,.merveilleux,.terrible,.effrayant
 怨めしい     うらめしい        . haineux
@@ -282,7 +282,7 @@ Autres_adjectifs_en_i_(2)_·_形容詞二
 面白い       おもしろい        . intéressant
 若々しい     わかわかしい      . juvénile
 醜い         みにくい          . laid
-永い         ながい            . long(temps)
+永い         ながい            . long.(temps)
 明るい       あかるい          . lumineux
 動きが鈍い   うごきがにぶい    . maladroit
 男らしい     おとこらしい      . masculin

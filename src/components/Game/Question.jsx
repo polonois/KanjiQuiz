@@ -299,12 +299,12 @@ class Question extends Component {
       let answers = this.previousAllowedAnswers.toString().replace(/ \(.*?\)|\(.*?\)/g,'').split(/, |,/);
       previousAnswer = previousAnswer.replace(/[ ]+$/g, '');
       for (var i = 0 ; i < answers.length ; i++) {
-                                let good_answer_prepo = false;
+        let good_answer_prepo = false;
         let answer_prepo = false;
         let words = answers[i].split(/\'|\ /);
         let refinedAnswer = previousAnswer.split(/\'|\ /);
-        console.log(refinedAnswer);
-        console.log(words);
+        //console.log(refinedAnswer);
+        //console.log(words);
         for (var j= 0; j < prepo.length ; j++) {
           if(!prepo[j].localeCompare(words[0])) {
             good_answer_prepo = true;
@@ -313,8 +313,8 @@ class Question extends Component {
             answer_prepo = true;
           }
         }
-        console.log(good_answer_prepo);
-        console.log(answer_prepo);
+        //console.log(good_answer_prepo);
+        //console.log(answer_prepo);
         if (good_answer_prepo && answer_prepo) {
           words = words.slice(1);
           refinedAnswer = refinedAnswer.slice(1);
